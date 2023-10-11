@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-bottom: 5rem;
+  scroll-padding-top: 6rem;
+}
+
+html, body {
+  overflow-x: hidden;
+}
