@@ -1,11 +1,33 @@
 "use client";
 import React, { useState } from 'react'
 import ProjectCard from './ProjectCard'
-import ProjectTag from './ProjectTag'
+
 
 const projectsData = [
-    {
-        id: 1,
+    
+  
+  {
+    id:1,
+    title: "Phoenix Soccer Club",
+    description: "The official website for Phoenix Soccer Club, a youth soccer camp in NYC. Built using Next.js and Tailwind CSS.",
+    image: "/images/ProjectScreenshots/Phoenix.PNG",
+    tag: ["All", "Web", "Mobile"],
+    gitUrl: "https://github.com/3ldin/Phoenixsoccer",
+    previewUrl: "https://phoenixsoccer.club",
+  },
+  
+  {
+    id: 2,
+    title: "Empire D&E Inc.",
+    description: "The official website of Empire D&E Inc., a renovation company based out of NYC. Built using Next.js and Tailwind CSS.",
+    image: "/images/ProjectScreenshots/aboutempire.PNG",
+    tag: ["All", "Web", "Mobile"],
+    gitUrl: "https://github.com/3ldin/EmpireD-E",
+    previewUrl: "https://empiredeinc.com",
+},
+
+  {
+        id: 3,
         title: "Fancy Restaurant Website",
         description: "A website of the fictional restaurant, 'Dorsia', from the film 'American Psycho.' Built using HTML, CSS, Javascript, and React.",
         image: "/images/ProjectScreenshots/DorsiaProject.PNG",
@@ -14,7 +36,7 @@ const projectsData = [
         previewUrl: "https://dorsisanyc.netlify.app/",
     },
     {
-        id: 2,
+        id: 4,
         title: "An Infinite Wordle",
         description: "A clone of the game 'Wordle' that can be played multiple times, just by refreshing the page. Built using HTML, CSS, Javascript, and React.",
         image: "/images/ProjectScreenshots/WordleProject.PNG",
@@ -22,15 +44,7 @@ const projectsData = [
         gitUrl: "https://github.com/3ldin/InfiniteWordle",
         previewUrl: "https://wordleinfinite.netlify.app/",
     },
-    {
-        id: 3,
-        title: "Tesla Clone",
-        description: "A clone of the Tesla website, with a built in scroll snapping feature. Built using HTML, CSS, and Javascript.",
-        image: "/images/ProjectScreenshots/TeslaProject.PNG",
-        tag: ["All", "Web"],
-        gitUrl: "https://github.com/3ldin/teslaclone",
-        previewUrl: "https://oldteslaclone.netlify.app/",
-    },
+
 ]
 
 
@@ -48,27 +62,13 @@ const Projects = () => {
 
     return (
     <>
-      <h2 id='projects' className='text-center text-4xl font-bold text-white mt-2 mb-4'>
+      <h2 id='projects' className='text-center text-5xl font-bold text-black mt-12 mb-4'>
         My Projects
       </h2>
       <div className='text-white flex flex-row justify-center items-center gap-2 py-6 '>
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
-        />
+
       </div>
-      <div className='grid md:grid-cols-3 gap-8 md:gap-12 pb-20'>
+      <div className='grid md:grid-cols-2 gap-8 md:gap-12 lg:pb-20'>
         {filteredProjects.map((project) => (
           <ProjectCard 
           key={project.id} 

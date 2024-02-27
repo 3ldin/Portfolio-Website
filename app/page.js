@@ -4,11 +4,12 @@ import Navbar from './components/Navbar'
 import About from './components/About'
 import Projects from './components/Projects'
 import Email from './components/Email'
+import Footer from './components/Footer'
 
 
 export default function Home() {
   return (
-  <main className="flex min-h-screen flex-col bg-[#0e0d0d]">
+  <main className="flex min-h-screen flex-col bg-white">
       <Navbar />
         <div class="container mt-24 mx-auto px-12 py-4">
         <Hero />
@@ -16,6 +17,7 @@ export default function Home() {
         <Projects />
         <Email />
       </div>
+      <Footer />
   </main>
     
 )
