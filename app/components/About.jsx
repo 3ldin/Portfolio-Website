@@ -12,7 +12,7 @@ const About = () => {
               initial={{ opacity: 0, scale: 0.5 }} 
               animate={{ opacity: 1, scale: 1 }} 
               transition={{ duration: 0.5 }}>
-                <h1 className='text-center text-5xl mb-6 font-bold'>About Me</h1>
+                <h1 className='text-center text-4xl sm:text-5xl lg:text-6xl mb-6 font-bold'>About Me</h1>
        
           <div className='mt-4'>  
             <p className='text-2xl lg:text-3xl lg:mt-4 text-center col-span-2'>

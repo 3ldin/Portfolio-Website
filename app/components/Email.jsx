@@ -29,7 +29,7 @@ const Email = () => {
       className="grid md:grid-cols-2 my-12 md:my-12 py-28 gap-4 relative"
     >
       <div className="z-10">
-        <h5 className="text-4xl font-bold text-black my-2">
+        <h5 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black my-2">
           Contact Me
         </h5>
         <p className="text-black mb-4 max-w-md">

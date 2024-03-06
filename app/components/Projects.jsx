@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react'
 import ProjectCard from './ProjectCard'
+import { motion } from 'framer-motion';
 
 
 const projectsData = [
@@ -15,9 +16,18 @@ const projectsData = [
     gitUrl: "https://github.com/3ldin/Phoenixsoccer",
     previewUrl: "https://phoenixsoccer.club",
   },
-  
   {
-    id: 2,
+  id: 2,
+  title: "Porsche 911",
+  description: "A personal project representing the variants and generations of the Porsche 911. Made using Next.js and Tailwind CSS.",
+  image: "/images/gt2rs.jpg",
+  tag: ["All", "Web", "Mobile"],
+  gitUrl: "https://github.com/3ldin/Porsche911",
+  previewUrl: "https://porsche911-psi.vercel.app/",
+},
+
+  {
+    id: 3,
     title: "Empire D&E Inc.",
     description: "The official website of Empire D&E Inc., a renovation company based out of NYC. Built using Next.js and Tailwind CSS.",
     image: "/images/ProjectScreenshots/aboutempire.PNG",
@@ -26,24 +36,7 @@ const projectsData = [
     previewUrl: "https://empiredeinc.com",
 },
 
-  {
-        id: 3,
-        title: "Fancy Restaurant Website",
-        description: "A website of the fictional restaurant, 'Dorsia', from the film 'American Psycho.' Built using HTML, CSS, Javascript, and React.",
-        image: "/images/ProjectScreenshots/DorsiaProject.PNG",
-        tag: ["All", "Web", "Mobile"],
-        gitUrl: "https://github.com/3ldin/Dorsia",
-        previewUrl: "https://dorsisanyc.netlify.app/",
-    },
-    {
-        id: 4,
-        title: "An Infinite Wordle",
-        description: "A clone of the game 'Wordle' that can be played multiple times, just by refreshing the page. Built using HTML, CSS, Javascript, and React.",
-        image: "/images/ProjectScreenshots/WordleProject.PNG",
-        tag: ["All", "Web", "Mobile"],
-        gitUrl: "https://github.com/3ldin/InfiniteWordle",
-        previewUrl: "https://wordleinfinite.netlify.app/",
-    },
+
 
 ]
 
@@ -62,13 +55,19 @@ const Projects = () => {
 
     return (
     <>
-      <h2 id='projects' className='text-center text-5xl font-bold text-black mt-12 mb-4'>
+            <motion.div 
+          initial={{ opacity: 0, scale: 0.5}} 
+          animate={{ opacity: 1, scale: 1 }} 
+          transition={{ duration: 0.5 }} 
+          
+        >
+      <h2 id='projects' className='text-center text-4xl sm:text-5xl lg:text-6xl font-bold text-black mt-12 mb-4'>
         My Projects
       </h2>
       <div className='text-white flex flex-row justify-center items-center gap-2 py-6 '>
 
       </div>
-      <div className='grid md:grid-cols-2 gap-8 md:gap-12 lg:pb-20'>
+      <div className='grid lg:grid-cols-3  gap-8 md:gap-12 lg:pb-20'>
         {filteredProjects.map((project) => (
           <ProjectCard 
           key={project.id} 
@@ -79,7 +78,7 @@ const Projects = () => {
           previewUrl={project.previewUrl}
           /> 
         ))}
-      </div>
+      </div></motion.div>
     </>
   )
 }
