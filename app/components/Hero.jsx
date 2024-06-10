@@ -20,7 +20,7 @@ const Hero = () => {
         <p className='text-green-900 lg:text-xl mt-4 mb-8'>
         <TypeAnimation
         sequence={[
-        'Front End Developer',
+        'Full Stack Developer',
         1700,
 
         ]}
