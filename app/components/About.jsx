@@ -16,7 +16,7 @@ const About = () => {
        
           <div className='mt-4'>  
             <p className='text-2xl lg:text-3xl lg:mt-4 text-center col-span-2'>
-                I am a full stack developer with a passion for creating interactive and responsive web applications. I have 2+ years of experience using HTML, CSS, Javascript, React, Next.js, Tailwind CSS and Node.js. I am a natural problem solver and get to the bottom of anything that is put in front of me. I always look to expand my knowledge and skill set, and make myself useful where needed. I understand the importance of working as a team, and I am excited to work with others to create amazing projects.
+                I am a full stack developer with a passion for creating interactive and responsive web applications. I have 3 years of experience using HTML, CSS, Javascript, React, Next.js, Tailwind CSS and Node.js. I am a natural problem solver and get to the bottom of anything that is put in front of me. I always look to expand my knowledge and skill set, and make myself useful where needed. I understand the importance of working as a team, and I am excited to work with others to create amazing projects.
             </p>
           </div>
           </motion.div>
